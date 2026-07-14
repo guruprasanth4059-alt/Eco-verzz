@@ -2,6 +2,7 @@
 
 import { AppState } from './state.js';
 import { AppRouter } from './router.js';
+import { initAICopilot } from './aiCopilot.js';
 
 class App {
     constructor() {
@@ -11,6 +12,9 @@ class App {
         // Load initial theme
         const savedTheme = localStorage.getItem('eco-impact-theme') || 'light';
         AppState.setTheme(savedTheme);
+
+        // Initialize AI Copilot
+        initAICopilot();
     }
 
     bindEvents() {

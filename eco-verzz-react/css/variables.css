@@ -1,17 +1,18 @@
-/* CSS Variables & Design Tokens */
+/* CSS Variables & Design Tokens - Eco Verzz UI/UX System */
 
 :root {
-    /* Fonts */
-    --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    /* Font System */
+    --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-    /* Base Spacing */
-    --spacing-xs: 0.25rem;
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 1.5rem;
-    --spacing-xl: 2.5rem;
-    --spacing-xxl: 4rem;
+    /* Base 8px Spacing Grid */
+    --spacing-xs: 0.5rem;   /* 8px */
+    --spacing-sm: 1.0rem;   /* 16px */
+    --spacing-md: 1.5rem;   /* 24px */
+    --spacing-lg: 2.0rem;   /* 32px */
+    --spacing-xl: 3.0rem;   /* 48px */
+    --spacing-xxl: 4.5rem;  /* 72px */
 
     /* Borders & Radius */
     --radius-sm: 8px;
@@ -21,86 +22,82 @@
     --radius-full: 9999px;
     --border-width: 1px;
 
-    /* Animations & Transitions */
-    --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Animation Presets */
+    --transition-fast: 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 
-    /* Marketing Palette (Earth-first, clean, warm) */
-    --marketing-bg: #F7F5EF;
-    --marketing-bg-darker: #EFECE3;
-    --marketing-forest: #0F5132;
-    --marketing-forest-hover: #16643F;
-    --marketing-forest-rgb: 15, 81, 50;
-    --marketing-leaf: #4CAF50;
-    --marketing-soil: #5D4037;
-    --marketing-sky: #0284C7;
-    --marketing-sand: #DDB892;
-    --marketing-text: #1E2522;
-    --marketing-text-muted: #53625A;
-    --marketing-card-bg: #FFFFFF;
-    --marketing-border: rgba(15, 81, 50, 0.08);
+    /* Color Tokens (Enterprise-grade SaaS Palette) */
+    --color-primary: #16A34A;       /* Emerald / Green Accent */
+    --color-primary-rgb: 22, 163, 74;
+    --color-primary-hover: #15803d;
+    
+    --color-secondary: #14B8A6;     /* Teal / Mint Accent */
+    --color-secondary-rgb: 20, 184, 166;
+    
+    --color-accent: #3B82F6;        /* AI/Tech/Blue Accent */
+    --color-accent-rgb: 59, 130, 246;
+
+    --color-warning: #F59E0B;       /* Amber Warning */
+    --color-warning-rgb: 245, 158, 11;
+
+    --color-danger: #EF4444;        /* Red Alert */
+    --color-danger-rgb: 239, 68, 68;
+
+    /* Base Surfaces - Light Theme */
+    --bg-surface: #FFFFFF;
+    --bg-surface-rgb: 255, 255, 255;
+    --bg-app: #FAFAFB;
+    --bg-app-rgb: 250, 250, 251;
+    --text-main: #0B1320;
+    --text-muted: #64748B;
+    --border-main: rgba(11, 19, 32, 0.08);
+    --border-glass: rgba(255, 255, 255, 0.6);
+    --shadow-main: 0 4px 30px rgba(0, 0, 0, 0.02);
+    --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.04);
+    
+    /* Nav & Sidebar Light Mode defaults */
+    --nav-bg: rgba(255, 255, 255, 0.8);
+    --sidebar-bg: #FFFFFF;
+    --sidebar-text: #0B1320;
+    --sidebar-text-muted: #64748B;
+    --sidebar-item-active: rgba(22, 163, 74, 0.08);
 
     /* Dashboard Modules Accents */
-    --color-intelligence: #10B981;      /* Emerald Green */
-    --color-intelligence-rgb: 16, 185, 129;
-    
-    --color-circular: #0891B2;          /* Teal / Cyan */
-    --color-circular-rgb: 8, 145, 178;
-    
-    --color-community: #F97316;         /* Warm Orange */
-    --color-community-rgb: 249, 115, 22;
-    
-    --color-ecojourney: #8B5CF6;        /* Violet / Purple */
+    --color-intelligence: #16A34A;
+    --color-intelligence-rgb: 22, 163, 74;
+    --color-circular: #14B8A6;
+    --color-circular-rgb: 20, 184, 166;
+    --color-community: #F59E0B;
+    --color-community-rgb: 245, 158, 11;
+    --color-ecojourney: #8B5CF6;
     --color-ecojourney-rgb: 139, 92, 246;
-    
-    --color-portfolio: #D97706;         /* Amber / Gold */
-    --color-portfolio-rgb: 217, 119, 6;
-    
-    --color-recognition: #F43F5E;       /* Rose / Coral Red */
-    --color-recognition-rgb: 244, 63, 94;
+    --color-portfolio: #3B82F6;
+    --color-portfolio-rgb: 59, 130, 246;
+    --color-recognition: #EF4444;
+    --color-recognition-rgb: 239, 68, 68;
 
-    /* Default Dynamic Accent Variable - Updated by Router */
     --module-accent: var(--color-intelligence);
     --module-accent-rgb: var(--color-intelligence-rgb);
-
-    /* Dashboard Base Theme (Default Light Mode) */
-    --db-bg: #F8FAFC;
-    --db-bg-rgb: 248, 250, 252;
-    --db-card-bg: #FFFFFF;
-    --db-card-bg-rgb: 255, 255, 255;
-    --db-text: #0F172A;
-    --db-text-muted: #64748B;
-    --db-border: #E2E8F0;
-    --db-input-bg: #F1F5F9;
-    --db-sidebar-bg: #0F5132; /* Rich Forest Green sidebar always */
-    --db-sidebar-text: #E8F5E9;
-    --db-sidebar-text-muted: rgba(232, 245, 233, 0.6);
-    --db-sidebar-item-active: rgba(255, 255, 255, 0.12);
-    
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
-    --shadow-glow: 0 8px 30px rgba(var(--module-accent-rgb), 0.15);
 }
 
-/* Dark Mode Theme Variables */
+/* Base Surfaces - Dark Theme (Preferred Dark-Mode-First Default) */
 [data-theme="dark"] {
-    --db-bg: #0B0F19;
-    --db-bg-rgb: 11, 15, 25;
-    --db-card-bg: #141C2F;
-    --db-card-bg-rgb: 20, 28, 47;
-    --db-text: #F8FAFC;
-    --db-text-muted: #94A3B8;
-    --db-border: #1E293B;
-    --db-input-bg: #1E293B;
-    --db-sidebar-bg: #0A0D14; /* Sleeker, darker sidebar in Dark Mode */
-    --db-sidebar-text: #F8FAFC;
-    --db-sidebar-text-muted: #64748B;
-    --db-sidebar-item-active: #1E293B;
-    
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
-    --shadow-glow: 0 8px 30px rgba(var(--module-accent-rgb), 0.25);
+    --bg-surface: #0E1626;
+    --bg-surface-rgb: 14, 22, 38;
+    --bg-app: #0B1220;
+    --bg-app-rgb: 11, 18, 32;
+    --text-main: #F8FAFC;
+    --text-muted: #94A3B8;
+    --border-main: rgba(255, 255, 255, 0.06);
+    --border-glass: rgba(255, 255, 255, 0.05);
+    --shadow-main: 0 4px 30px rgba(0, 0, 0, 0.2);
+    --shadow-card: 0 20px 40px -15px rgba(0, 0, 0, 0.3);
+
+    /* Nav & Sidebar Dark Mode defaults */
+    --nav-bg: rgba(11, 18, 32, 0.8);
+    --sidebar-bg: #0E1626;
+    --sidebar-text: #F8FAFC;
+    --sidebar-text-muted: #64748B;
+    --sidebar-item-active: rgba(255, 255, 255, 0.04);
 }
