@@ -1,0 +1,106 @@
+/* CSS Variables & Design Tokens */
+
+:root {
+    /* Fonts */
+    --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+    /* Base Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2.5rem;
+    --spacing-xxl: 4rem;
+
+    /* Borders & Radius */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+    --radius-full: 9999px;
+    --border-width: 1px;
+
+    /* Animations & Transitions */
+    --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Marketing Palette (Earth-first, clean, warm) */
+    --marketing-bg: #F7F5EF;
+    --marketing-bg-darker: #EFECE3;
+    --marketing-forest: #0F5132;
+    --marketing-forest-hover: #16643F;
+    --marketing-forest-rgb: 15, 81, 50;
+    --marketing-leaf: #4CAF50;
+    --marketing-soil: #5D4037;
+    --marketing-sky: #0284C7;
+    --marketing-sand: #DDB892;
+    --marketing-text: #1E2522;
+    --marketing-text-muted: #53625A;
+    --marketing-card-bg: #FFFFFF;
+    --marketing-border: rgba(15, 81, 50, 0.08);
+
+    /* Dashboard Modules Accents */
+    --color-intelligence: #10B981;      /* Emerald Green */
+    --color-intelligence-rgb: 16, 185, 129;
+    
+    --color-circular: #0891B2;          /* Teal / Cyan */
+    --color-circular-rgb: 8, 145, 178;
+    
+    --color-community: #F97316;         /* Warm Orange */
+    --color-community-rgb: 249, 115, 22;
+    
+    --color-ecojourney: #8B5CF6;        /* Violet / Purple */
+    --color-ecojourney-rgb: 139, 92, 246;
+    
+    --color-portfolio: #D97706;         /* Amber / Gold */
+    --color-portfolio-rgb: 217, 119, 6;
+    
+    --color-recognition: #F43F5E;       /* Rose / Coral Red */
+    --color-recognition-rgb: 244, 63, 94;
+
+    /* Default Dynamic Accent Variable - Updated by Router */
+    --module-accent: var(--color-intelligence);
+    --module-accent-rgb: var(--color-intelligence-rgb);
+
+    /* Dashboard Base Theme (Default Light Mode) */
+    --db-bg: #F8FAFC;
+    --db-bg-rgb: 248, 250, 252;
+    --db-card-bg: #FFFFFF;
+    --db-card-bg-rgb: 255, 255, 255;
+    --db-text: #0F172A;
+    --db-text-muted: #64748B;
+    --db-border: #E2E8F0;
+    --db-input-bg: #F1F5F9;
+    --db-sidebar-bg: #0F5132; /* Rich Forest Green sidebar always */
+    --db-sidebar-text: #E8F5E9;
+    --db-sidebar-text-muted: rgba(232, 245, 233, 0.6);
+    --db-sidebar-item-active: rgba(255, 255, 255, 0.12);
+    
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+    --shadow-glow: 0 8px 30px rgba(var(--module-accent-rgb), 0.15);
+}
+
+/* Dark Mode Theme Variables */
+[data-theme="dark"] {
+    --db-bg: #0B0F19;
+    --db-bg-rgb: 11, 15, 25;
+    --db-card-bg: #141C2F;
+    --db-card-bg-rgb: 20, 28, 47;
+    --db-text: #F8FAFC;
+    --db-text-muted: #94A3B8;
+    --db-border: #1E293B;
+    --db-input-bg: #1E293B;
+    --db-sidebar-bg: #0A0D14; /* Sleeker, darker sidebar in Dark Mode */
+    --db-sidebar-text: #F8FAFC;
+    --db-sidebar-text-muted: #64748B;
+    --db-sidebar-item-active: #1E293B;
+    
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+    --shadow-glow: 0 8px 30px rgba(var(--module-accent-rgb), 0.25);
+}

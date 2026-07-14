@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECO VERZZ — Environmental Operating System</title>
+    <meta name="description" content="ECO VERZZ is an AI-powered Environmental Operating System that turns sustainability into a daily habit through intelligence, community, and gamified rewards.">
+    
+    <!-- Open Graph SEO -->
+    <meta property="og:title" content="ECO VERZZ — Environmental Operating System">
+    <meta property="og:description" content="AI-powered environmental intelligence, circular economy tools, and community action.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/marketing.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+    <!-- Main Router Wrapper -->
+    <div id="app">
+        
+        <!-- MARKETING SHELL -->
+        <div id="marketing-shell" class="shell hidden">
+            <!-- Navigation -->
+            <header class="marketing-header">
+                <div class="container nav-container">
+                    <a href="#/" class="logo-link">
+                        <div class="logo-icon-wrapper">
+                            <img src="images/logo.jpg" alt="ECO VERZZ Logo" class="logo-image-icon">
+                        </div>
+                        <span class="logo-text">ECO<span class="logo-highlight"> VERZZ</span></span>
+                    </a>
+                    
+                    <nav class="marketing-nav">
+                        <a href="#/" class="nav-item" id="nav-home">Home</a>
+                        <a href="#/features" class="nav-item" id="nav-features">Pillars</a>
+                        <a href="#/about" class="nav-item" id="nav-about">Manifesto</a>
+                        <a href="#/impact" class="nav-item" id="nav-impact">Impact</a>
+                    </nav>
+
+                    <div class="nav-actions" style="display: flex; align-items: center; gap: var(--spacing-md);">
+                        <a href="#/login" class="nav-item" id="nav-login" style="margin-bottom: 0; padding: 0;">Sign In</a>
+                        <a href="#/signup" class="btn btn-primary btn-nav ripple" style="background-color: var(--marketing-forest); display: flex; align-items: center; gap: 6px;">
+                            <span>Register</span>
+                            <i data-lucide="user-plus" style="width: 16px; height: 16px;"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Mobile Hamburger -->
+                    <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+                        <i data-lucide="menu" class="menu-open-icon"></i>
+                        <i data-lucide="x" class="menu-close-icon hidden"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Mobile Nav Menu -->
+            <div class="mobile-menu hidden">
+                <a href="#/" class="mobile-nav-item">Home</a>
+                <a href="#/features" class="mobile-nav-item">Pillars</a>
+                <a href="#/about" class="mobile-nav-item">Manifesto</a>
+                <a href="#/impact" class="mobile-nav-item">Impact</a>
+                <a href="#/login" class="mobile-nav-item">Sign In</a>
+                <a href="#/signup" class="btn btn-primary mobile-menu-btn" style="background-color: var(--marketing-forest); display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: var(--spacing-sm);">
+                    <span>Register</span>
+                    <i data-lucide="user-plus" style="width: 16px; height: 16px;"></i>
+                </a>
+            </div>
+
+            <!-- View Container for Marketing Pages -->
+            <main id="marketing-view-container" class="page-transition-container"></main>
+
+            <!-- Footer -->
+            <footer class="marketing-footer">
+                <div class="container footer-grid">
+                    <div class="footer-brand">
+                        <div class="logo-link">
+                            <div class="logo-icon-wrapper">
+                                <img src="images/logo.jpg" alt="ECO VERZZ Logo" class="logo-image-icon">
+                            </div>
+                            <span class="logo-text">ECO<span class="logo-highlight"> VERZZ</span></span>
+                        </div>
+                        <p class="footer-tagline">The Environmental Operating System for the Circular Future. Every action matters.</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                            <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links-group">
+                        <h3>Operating System</h3>
+                        <a href="#/features">6 Pillars</a>
+                        <a href="#/about">EcoVerse Manifesto</a>
+                        <a href="#/impact">Impact Metrics</a>
+                    </div>
+                    <div class="footer-links-group">
+                        <h3>Product</h3>
+                        <a href="#/login">Launch Dashboard</a>
+                        <a href="#/dashboard/intelligence">EI Module</a>
+                        <a href="#/dashboard/circular">Circular Exchange</a>
+                    </div>
+                    <div class="footer-links-group">
+                        <h3>Community</h3>
+                        <a href="#/dashboard/community">Global Feed</a>
+                        <a href="#/dashboard/recognition">EcoPoints Ledgers</a>
+                        <a href="#/dashboard/ecojourney">AI Goals</a>
+                    </div>
+                </div>
+                <div class="container footer-bottom">
+                    <p>&copy; 2026 ECO VERZZ OS. Crafted with care for the Biosphere.</p>
+                </div>
+            </footer>
+        </div>
+
+        <!-- DASHBOARD SHELL -->
+        <div id="dashboard-shell" class="hidden">
+            <!-- Sidebar Chrome -->
+            <aside class="dashboard-sidebar">
+                <div class="sidebar-header">
+                    <a href="#/" class="sidebar-logo">
+                        <div class="logo-icon-wrapper" style="width: 32px; height: 32px;">
+                            <img src="images/logo.jpg" alt="ECO VERZZ Logo" class="logo-image-icon">
+                        </div>
+                        <span class="logo-text">ECO<span class="logo-highlight"> VERZZ</span></span>
+                    </a>
+                    <span class="sidebar-badge">OS v1.2</span>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <a href="#/dashboard" class="sidebar-item" id="side-db-home">
+                        <i data-lucide="layout-dashboard"></i>
+                        <span>Dashboard Home</span>
+                    </a>
+                    
+                    <div class="sidebar-separator">MODULES</div>
+                    
+                    <a href="#/dashboard/intelligence" class="sidebar-item module-intelligence" id="side-db-intelligence">
+                        <i data-lucide="globe" class="accent-icon"></i>
+                        <span>EI Dashboard</span>
+                    </a>
+                    <a href="#/dashboard/circular" class="sidebar-item module-circular" id="side-db-circular">
+                        <i data-lucide="refresh-cw" class="accent-icon"></i>
+                        <span>Circular Exchange</span>
+                    </a>
+                    <a href="#/dashboard/community" class="sidebar-item module-community" id="side-db-community">
+                        <i data-lucide="users" class="accent-icon"></i>
+                        <span>Green Community</span>
+                    </a>
+                    <a href="#/dashboard/ecojourney" class="sidebar-item module-ecojourney" id="side-db-ecojourney">
+                        <i data-lucide="sparkles" class="accent-icon"></i>
+                        <span>EcoJourney AI</span>
+                    </a>
+                    <a href="#/dashboard/portfolio" class="sidebar-item module-portfolio" id="side-db-portfolio">
+                        <i data-lucide="award" class="accent-icon"></i>
+                        <span>Green Portfolio</span>
+                    </a>
+                    <a href="#/dashboard/recognition" class="sidebar-item module-recognition" id="side-db-recognition">
+                        <i data-lucide="trophy" class="accent-icon"></i>
+                        <span>Rewards & Recognition</span>
+                    </a>
+                </nav>
+
+                <div class="sidebar-footer">
+                    <a href="#/" class="sidebar-back-home">
+                        <i data-lucide="log-out"></i>
+                        <span>Exit to Home</span>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Dashboard Content Shell -->
+            <div class="dashboard-main">
+                <!-- Topbar Chrome -->
+                <header class="dashboard-topbar">
+                    <div class="topbar-left">
+                        <button class="sidebar-toggle-btn" aria-label="Toggle Sidebar">
+                            <i data-lucide="menu"></i>
+                        </button>
+                        <h2 id="topbar-title" class="topbar-view-title">Dashboard</h2>
+                    </div>
+                    
+                    <div class="topbar-right">
+                        <!-- Points Counter Widget -->
+                        <div class="topbar-widget points-widget" title="Your current EcoPoints ledger balance">
+                            <i data-lucide="zap" class="points-icon animated-pulse"></i>
+                            <span id="topbar-points-value" class="points-value">4,250</span>
+                            <span class="points-label">PTS</span>
+                        </div>
+                        
+                        <!-- Streak Widget -->
+                        <div class="topbar-widget streak-widget" title="Daily active streak multiplier">
+                            <i data-lucide="flame" class="streak-icon"></i>
+                            <span id="topbar-streak-value" class="streak-value">12</span>
+                            <span class="streak-label">DAYS</span>
+                        </div>
+
+                        <!-- Theme Toggle Button -->
+                        <button id="theme-toggle" class="topbar-icon-btn ripple" aria-label="Toggle Theme" title="Switch Light/Dark Mode">
+                            <i data-lucide="sun" class="theme-icon-light"></i>
+                            <i data-lucide="moon" class="theme-icon-dark hidden"></i>
+                        </button>
+
+                        <!-- Notifications Trigger -->
+                        <div class="notification-wrapper">
+                            <button class="topbar-icon-btn notification-btn ripple" aria-label="Notifications" title="Recent activity alerts">
+                                <i data-lucide="bell"></i>
+                                <span class="notification-badge"></span>
+                            </button>
+                            <!-- Simple Notification Dropdown -->
+                            <div class="notification-dropdown hidden">
+                                <div class="dropdown-header">
+                                    <h3>Notifications</h3>
+                                    <button class="clear-notifications-btn">Clear All</button>
+                                </div>
+                                <div class="dropdown-list" id="notification-list">
+                                    <!-- Dynamic alerts inserted here -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- User Profile Card -->
+                        <div class="topbar-profile">
+                            <img src="https://api.dicebear.com/7.x/bottts/svg?seed=EcoCitizen" alt="User Profile Avatar" class="profile-avatar">
+                            <div class="profile-meta">
+                                <span class="profile-name">Eco-Citizen</span>
+                                <span class="profile-role">Level 4 Pioneer</span>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- View Container for Dashboard Subviews -->
+                <div id="dashboard-view-container" class="dashboard-page-content page-transition-container"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Core App JavaScript -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

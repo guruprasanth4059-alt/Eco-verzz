@@ -1,0 +1,12 @@
+{
+  "name": "eco-impact-os",
+  "version": "1.0.0",
+  "description": "Eco Impact - Environmental Operating System",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server . -p 3000 -o"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
